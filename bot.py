@@ -1967,6 +1967,7 @@ Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"""
         print(f"\nOrder executed successfully for {symbol}:")
         print(trade_details)
         send_email_notification(f"Trade Executed: {signal.upper()} {symbol}", trade_details)
+        sys.exit(0)
     else:
         error_msg = f"Order failed for {symbol}: {order['retMsg']}"
         print(error_msg)
